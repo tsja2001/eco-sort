@@ -44,8 +44,8 @@ const Details = () => {
   const shareHandler = async () => {
     const shareData = {
       title: '垃圾分类',
-      text: `1. 建议1 购买可重复使用的商品，或者选择包装更环保、更少的商品\n
-      2. 建议2 减少购买有害垃圾，了解并熟悉有害垃圾的正确处理方式 `,
+      text: `建议1: 购买可重复使用的商品，或者选择包装更环保、更少的商品。\n
+      建议2: 减少购买有害垃圾，了解并熟悉有害垃圾的正确处理方式。`,
       url: 'https://tsja2001.github.io',
     }
 
@@ -76,10 +76,10 @@ const Details = () => {
         <div className="text-xl font-medium ">根据当前数据, 提供以下建议:</div>
         <ul>
           <li className="text-lg mt-1">
-            建议1: 购买可重复使用的商品，或者选择包装更环保、更少的商品
+            建议1: 购买可重复使用的商品，或者选择包装更环保、更少的商品。
           </li>
           <li className="text-lg mt-1">
-            建议2: 减少购买有害垃圾，了解并熟悉有害垃圾的正确处理方式{' '}
+            建议2: 减少购买有害垃圾，了解并熟悉有害垃圾的正确处理方式。
           </li>
         </ul>
       </div>
