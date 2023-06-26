@@ -24,6 +24,7 @@ export function generateDataWeek(dateRange = 'week') {
         case '厨余垃圾':
           value = Math.floor(Math.random() * 5) + 6
           break
+          
         case '其他垃圾':
           value = Math.floor(Math.random() * 3) + 1
           break

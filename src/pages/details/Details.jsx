@@ -41,6 +41,25 @@ const Details = () => {
     console.log('weekData', weekData)
   }, [])
 
+  const shareHandler = async () => {
+    const shareData = {
+      title: 'Web Share API示例',
+      text: '这是我想分享的文字',
+      url: 'https://tsja2001.github.io',
+    }
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData)
+        console.log('分享成功')
+      } catch (error) {
+        console.error('分享失败:', error)
+      }
+    } else {
+      console.error('你的浏览器不支持Web Share API')
+    }
+  }
+
   return (
     <div className="content flex flex-col w-full h-screen justify-between">
       <Tabs>
@@ -65,7 +84,12 @@ const Details = () => {
       <div className={style.line}></div>
       <div className="text pl-2 mt-4">
         <div className="text-xl font-medium">分享到:</div>
-        <img src={img}></img>
+        <img
+          src={img}
+          onClick={() => {
+            shareHandler()
+          }}
+        ></img>
       </div>
     </div>
   )
