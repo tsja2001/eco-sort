@@ -1,5 +1,5 @@
 export function generateDataWeek(dateRange = 'week') {
-  const categories = ['干垃圾', '湿垃圾', '有害垃圾', '厨余垃圾']
+  const categories = ['可回收垃圾', '厨余垃圾', '有害垃圾', '其他垃圾']
   let days
 
   if (dateRange === 'week') {
@@ -18,17 +18,17 @@ export function generateDataWeek(dateRange = 'week') {
     for (let j = 0; j < categories.length; j++) {
       let value
       switch (categories[j]) {
-        case '干垃圾':
-          value = Math.floor(Math.random() * 6) + 10
-          break
-        case '湿垃圾':
-          value = Math.floor(Math.random() * 7) + 13
-          break
-        case '有害垃圾':
-          value = Math.floor(Math.random() * 3) + 1
+        case '可回收垃圾':
+          value = Math.floor(Math.random() * 10) + 16
           break
         case '厨余垃圾':
-          value = Math.floor(Math.random() * 4) + 7
+          value = Math.floor(Math.random() * 5) + 6
+          break
+        case '其他垃圾':
+          value = Math.floor(Math.random() * 3) + 1
+          break
+        case '有害垃圾':
+          value = Math.floor(Math.random() * 4) + 8
           break
       }
 
