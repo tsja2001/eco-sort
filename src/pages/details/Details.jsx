@@ -42,9 +42,11 @@ const Details = () => {
   }, [])
 
   const shareHandler = async () => {
+    alert('点击了分享按钮')
     const shareData = {
-      title: 'Web Share API示例',
-      text: '这是我想分享的文字',
+      title: '垃圾分类',
+      text: `1. 建议1 购买可重复使用的商品，或者选择包装更环保、更少的商品\n
+      2. 建议2 减少购买有害垃圾，了解并熟悉有害垃圾的正确处理方式 `,
       url: 'https://tsja2001.github.io',
     }
 
@@ -52,11 +54,14 @@ const Details = () => {
       try {
         await navigator.share(shareData)
         console.log('分享成功')
+        alert('分享成功')
       } catch (error) {
         console.error('分享失败:', error)
+        alert('分享失败')
       }
     } else {
       console.error('你的浏览器不支持Web Share API')
+      alert('你的浏览器不支持Web Share API')
     }
   }
 
@@ -75,9 +80,12 @@ const Details = () => {
       <div className="text pl-2">
         <div className="text-xl font-medium ">根据当前数据, 提供以下建议:</div>
         <ul>
-          <li className="text-lg">1. 建议1 xxxxxxxxxxxxxxx, xxxxxxxxxx</li>
-          <li className="text-lg">1. 建议2 xxxxxxxxxxxxxxx, xxxxxxxxxx</li>
-          <li className="text-lg">1. 建议3 xxxxxxxxxxxxxxx, xxxxxxxxxx</li>
+          <li className="text-lg">
+            1. 建议1 购买可重复使用的商品，或者选择包装更环保、更少的商品
+          </li>
+          <li className="text-lg">
+            2. 建议2 减少购买有害垃圾，了解并熟悉有害垃圾的正确处理方式{' '}
+          </li>
         </ul>
       </div>
       {/* 分割线 */}
